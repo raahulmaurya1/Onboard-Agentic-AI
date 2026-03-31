@@ -1,0 +1,131 @@
+.section {
+  background: var(--white);
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionLabel {
+  display: inline-block;
+  background: rgba(237, 173, 0, 0.1);
+  border: 1px solid rgba(237, 173, 0, 0.28);
+  border-radius: var(--radius-full);
+  padding: 6px 18px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #b8860b;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card */
+.card {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--cream);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.09);
+}
+
+/* Top accent bar */
+.accent_gold {
+  border-top: 3px solid var(--gold);
+}
+
+.accent_teal {
+  border-top: 3px solid var(--teal);
+}
+
+.card:hover.accent_gold {
+  border-color: var(--gold);
+}
+
+.card:hover.accent_teal {
+  border-color: var(--teal);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.72;
+}
+
+/* Corner decorative dot */
+.cardDot {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.dot_gold {
+  background: var(--gold);
+}
+
+.dot_teal {
+  background: var(--teal);
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

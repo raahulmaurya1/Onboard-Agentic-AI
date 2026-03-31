@@ -1,0 +1,22 @@
+{
+  "document_validation": {
+    "require_name_match": true,
+    "require_dob_match": true
+  },
+  "cross_checks": {
+    "PAN_vs_Aadhaar": {
+      "match_fields": [
+        {
+          "field": "name",
+          "tolerance": "exact",
+          "flag": "NAME_MISMATCH"
+        },
+        {
+          "field": "dob",
+          "tolerance": "exact",
+          "flag": "DOB_MISMATCH"
+        }
+      ]
+    }
+  }
+}

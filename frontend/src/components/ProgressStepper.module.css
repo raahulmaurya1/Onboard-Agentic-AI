@@ -1,0 +1,125 @@
+/* ── Sidebar shell ──────────────────────────────────────────────────────────── */
+.sidebar {
+  width: 196px;
+  flex-shrink: 0;
+  border-right: 1px solid #e8edf3;
+  background: linear-gradient(160deg, #fffdf5 0%, #f8fafc 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* ── Stepper container ─────────────────────────────────────────────────────── */
+.stepper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Each step row ─────────────────────────────────────────────────────────── */
+.stepRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* ── Left column: icon + connector ────────────────────────────────────────── */
+.iconCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Circle badge ──────────────────────────────────────────────────────────── */
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Completed → filled gold */
+.circleCompleted {
+  background: #EDAD00;
+  border: 2px solid #EDAD00;
+  color: #ffffff;
+}
+
+/* Active → gold ring + light gold fill + glow */
+.circleActive {
+  background: #fff7d4;
+  border: 2px solid #EDAD00;
+  color: #EDAD00;
+  box-shadow: 0 0 0 5px rgba(237, 173, 0, 0.15);
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+
+/* Upcoming → grey ring */
+.circleUpcoming {
+  background: #f1f5f9;
+  border: 2px solid #d1dbe7;
+  color: #94a3b8;
+}
+
+/* ── Connector line ──────────────────────────────────────────────────────────── */
+.connector {
+  width: 2px;
+  flex: 1;
+  min-height: 22px;
+  margin: 3px 0;
+  border-radius: 1px;
+  transition: background 0.25s ease;
+}
+
+.connectorDone {
+  background: #EDAD00;
+}
+
+.connectorPending {
+  background: #dde5ef;
+}
+
+/* ── Right column: label ───────────────────────────────────────────────────── */
+.labelCol {
+  padding-top: 6px;
+  padding-bottom: 22px;
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.titleCompleted {
+  color: #d4920a;
+}
+
+.titleActive {
+  color: #1a1a2e;
+}
+
+.titleUpcoming {
+  color: #94a3b8;
+}
+
+/* ── Pulse animation for active step ─────────────────────────────────────── */
+@keyframes pulseBadge {
+  0%, 100% { box-shadow: 0 0 0 5px rgba(237, 173, 0, 0.15); }
+  50%       { box-shadow: 0 0 0 8px rgba(237, 173, 0, 0.05); }
+}
+
+/* ── Hide on mobile (narrow viewports) ────────────────────────────────────── */
+@media (max-width: 680px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,54 @@
+
+[INTENT_AGENT] Raw LLM: {
+  "intent": "unknown",
+  "confidence": 0.95,
+  "reasoning": "The user expressed a general intent to open a bank account but did not provide specific details or keywords to distinguish between retail, digital-only, or business account types."
+}
+
+[DECISION_AGENT] Message: hi i want to open bank account
+[DECISION_AGENT] LLM Result: IntentCategory.UNKNOWN
+
+[INTENT_AGENT] Raw LLM: {
+  "intent": "digital_only",
+  "confidence": 1.0,
+  "reasoning": "The user explicitly stated 'digital only account', which directly matches the predefined category for zero-balance, instant digital accounts."
+}
+
+[DECISION_AGENT] Message: i want to open digital only account
+[DECISION_AGENT] LLM Result: IntentCategory.DIGITAL_ONLY
+
+[INTENT_AGENT] Raw LLM: {
+  "intent": "retail_savings",
+  "confidence": 0.98,
+  "reasoning": "The user explicitly mentioned wanting to open a 'retail account', which aligns directly with the retail_savings category for personal banking."
+}
+
+[DECISION_AGENT] Message: i want to open retail account
+[DECISION_AGENT] LLM Result: IntentCategory.RETAIL_SAVINGS
+
+[INTENT_AGENT] Raw LLM: {
+  "intent": "sme_current",
+  "confidence": 1.0,
+  "reasoning": "The user explicitly mentioned wanting to open an 'sme account', which directly maps to the SME Current account category for businesses."
+}
+
+[DECISION_AGENT] Message: i want to open sme account
+[DECISION_AGENT] LLM Result: IntentCategory.SME_CURRENT
+
+[INTENT_AGENT] Raw LLM: {
+  "intent": "unknown",
+  "confidence": 1.0,
+  "reasoning": "The user expressed a general desire to open a bank account but did not provide any specific qualifiers that would categorize it into retail savings, digital-only, or business current accounts."
+}
+
+[DECISION_AGENT] Message: hi i want to open bank account
+[DECISION_AGENT] LLM Result: IntentCategory.UNKNOWN
+
+[INTENT_AGENT] Raw LLM: {
+  "intent": "sme_current",
+  "confidence": 1.0,
+  "reasoning": "The user explicitly used the term 'sme account', which matches the SME (Small and Medium Enterprises) business account category."
+}
+
+[DECISION_AGENT] Message: i want to open sme account
+[DECISION_AGENT] LLM Result: IntentCategory.SME_CURRENT
