@@ -19,7 +19,7 @@
 ---
 ## 🎥 Demo Video
 
-[![Watch the demo](https://img.youtube.com/vi/OO37AeUx14Q/0.jpg)](https://youtu.be/OO37AeUx14Q)
+[![OnboardAI Demo](https://github.com/raahulmaurya1/Onboard-Agentic-AI/blob/18eea35b968ead7f7187b9c3d103f973f366f5fd/Thumbnail.png)](https://youtu.be/OO37AeUx14Q)
 
 ## Table of Contents
 
