@@ -17,6 +17,9 @@
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 ---
+## 🎥 Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/OO37AeUx14Q/0.jpg)](https://youtu.be/OO37AeUx14Q)
 
 ## Table of Contents
 
